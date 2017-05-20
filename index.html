@@ -1,3 +1,6 @@
+---
+---
+
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,78 +12,15 @@
   <h2>Mark E. Luebbers</h2>
   <p>Compiled in and dedicated to<br>Cincinnati, Ohio<br>May, 2017</p>
   <hr>
-  <section id="piano-fire" class="poem">
-    <h3>Piano Fire</h3>
-    <p>
-      In a cowflop field up the Trebo road,<br>
-      Old Gassett has a hundred or more, piled and scattered.<br>
-      Uprights mostly, players, a few busted baby grands,<br>
-      a battle plain of the excoriated, decorated old soldiers<br>
-      culled from barns, emptied from parlors,<br>
-      unsold from estate sales, left-behinds from foreclosures<br>
-      or auctioned off clans grown and moved.<br>
-      They are long-toothed, exhausted veterans<br>
-      of kids&rsquo; scales, booze breath sing-alongs,<br>
-      carols for the deaf grandmother, and the waltz,<br>
-      the rag, the boogie-woogie, Broadway<br>
-      and the tuneless wanderings of sleepless<br>
-      fingers in the dark.<br>
-    </p>
-    <p>
-      It is senseless work, making this collection.<br>
-      Gassett yanks and swears, levering them<br>
-      onto the dolly up the ramp to the trailer <br>
-      for the ride behind the pickup up the hill. <br>
-      Camp now to mice and wrens,<br>
-      once prized ebony lacquers now mottled. <br>
-      Standing with splintered, warped tops like<br>
-      wrecked tuxedo socialites, tilted and reeling,<br>
-      wearing sprung collars and spattered<br>
-      with insults from pigeons and bats.<br>
-      Gap toothed smiles leer from curved keyboards<br>
-      held in skeletal frames.<br>
-    </p>
-    <p>
-      Gassett says he&rsquo;ll invite everyone he knows up to see<br>
-      when he decides its time. Grill and swill.<br>
-      Haul &rsquo;em all to the middle, huck in a gallon of kerosene.<br>
-      And chuck on the smoking end of a Swisher Sweet.<br>
-      We&rsquo;ll stand clear of the crashed chords,<br>
-      singing strings, moans of failing joinery,<br>
-      skyward flailing sparks and the chorus of perfect ash,<br>
-      And howl with joy at all noise, light, and upward endings.<br>
-    </p>
-  </section>
-  <hr>
-  <section id="flashlight" class="poem">
-    <h3>Flashlight</h3>
-    <p>
-      &rsquo;68 bike ride home from supper at Davey&rsquo;s house.<br>
-      It&rsquo;s Friday night: hot dogs, Spaghetti-O&rsquo;s and Chips Ahoy.<br>
-      In the front wheel of my Stingray, a clothespin holds a ball card.<br>
-      The fading yellow beam of a big chrome watchman&rsquo;s friend, <br>
-      Wobbles duck taped to the chopper bars.<br>
-    </p>
-    <p>
-      Down the driveway and the D cells quit.<br>
-      No high beams oncoming. No streetlights to race under.<br>
-      No possum eyes or porch lamps, I&rsquo;m piloting just by crickets,<br>
-      thrush song, tire buzz and infinite happy blindness. <br>
-    </p>
-    <p>
-      Which, as I lift my hands free as wings, slips into foresight:<br>
-      Mom and Dad will die someday, then me, then my sisters.<br>
-      All will roll away into murk and vacuum.<br>
-      No birdsongs, stars, Laugh-in, no Hot Wheels.<br>
-    </p>
-    <p>
-      There is only now, and the sudden ache<br>
-      for the lamp light over my desk,<br>
-      after the climb up the long hill to our garage,<br>
-      So steep I have to get off and walk every time.<br>
-    </p>
-  </section>
-  <hr>
+
+  {% for poem in site.poems %}
+    <section class="poem">
+    <h3>{{ poem.title }}</h3>
+    {{ poem.content }}
+    </section>
+    <hr>
+  {% endfor %}
+
   <section>
     <h3>About the Author</h3>
     <p>
