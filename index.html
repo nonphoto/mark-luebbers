@@ -10,15 +10,19 @@
   <h1>Illustrated Collection of Poems</h1>
   <span>By</span>
   <h2>Mark E. Luebbers</h2>
-  <p>Compiled in and dedicated to<br>Cincinnati, Ohio<br>May, 2017</p>
+  <p>Cincinnati, Ohio<br>May, 2017</p>
   <hr>
 
   {% for poem in site.poems %}
-    <section class="poem">
-    <h3>{{ poem.title }}</h3>
-    {{ poem.content }}
-    </section>
-    <hr>
+  <section class="poem">
+    <h3>
+      {{ poem.title }}
+    </h3>
+    <div>
+      {{ poem.content }}
+    </div>
+  </section>
+  <hr>
   {% endfor %}
 
   <section>

@@ -1,13 +1,16 @@
 /*
 hsla(132, 5%, 95%, 1);
 hsla(148, 5%, 90%, 1);
+
+#DCDCDE
+#202020
 */
 
 html {
-  background-color: #DCDCDE;
-  color: #202020;
+  background-color: white;
+  color: black;
   font-size: 24px;
-  font-family: serif;
+  font-family: 'GT Sectra Trial', sans-serif;
 }
 
 body {
