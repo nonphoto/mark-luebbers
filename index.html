@@ -6,15 +6,28 @@
 </head>
 
 <body>
-  <span>An</span>
-  <h1>Illustrated Collection of Poems</h1>
-  <span>By</span>
-  <h2>Mark E. Luebbers</h2>
-  <p>Cincinnati, Ohio<br>May, 2017</p>
+  <section>
+    <span>An</span>
+    <h1>Illustrated Collection of Poems</h1>
+    <span>By</span>
+    <h2>Mark E. Luebbers</h2>
+    <p>Cincinnati, Ohio<br>May, 2017</p>
+  </section>
+
+  <hr>
+
+  <section>
+    {% for poem in site.poems %}
+    <a href="/#{{ poem.slug }}">
+      <h3>{{ poem.title }}</h3>
+    </a>
+    {% endfor %}
+  </section>
+
   <hr>
 
   {% for poem in site.poems %}
-  <section class="poem">
+  <section id="{{ poem.slug }}" class="poem">
     <h3>
       {{ poem.title }}
     </h3>
@@ -22,6 +35,7 @@
       {{ poem.content }}
     </div>
   </section>
+
   <hr>
   {% endfor %}
 
