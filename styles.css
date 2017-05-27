@@ -17,6 +17,7 @@ body {
   text-align: center;
   line-height: 1.4;
   padding: 12rem;
+  counter-reset: index;
 }
 
 section {
@@ -48,6 +49,11 @@ hr {
   border-bottom: solid 1px #000;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .poem h3 {
   margin-bottom: 3rem;
 }
@@ -55,4 +61,10 @@ hr {
 .poem p {
   text-align: left;
   /*font-size: 20px;*/
+}
+
+.poem::before {
+  display: block;
+  counter-increment: index;
+  content: counter(index);
 }
