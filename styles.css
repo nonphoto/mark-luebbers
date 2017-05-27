@@ -6,6 +6,11 @@ hsla(148, 5%, 90%, 1);
 #202020
 */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   background-color: white;
   color: black;
@@ -16,7 +21,7 @@ html {
 body {
   text-align: center;
   line-height: 1.4;
-  padding: 12rem;
+  padding: 0 20%;
   counter-reset: index;
 }
 
@@ -54,12 +59,23 @@ a {
   text-decoration: none;
 }
 
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  padding: 0;
+}
+
 .poem h3 {
   margin-bottom: 3rem;
 }
 
 .poem p {
   text-align: left;
+  white-space: nowrap;
   /*font-size: 20px;*/
 }
 
