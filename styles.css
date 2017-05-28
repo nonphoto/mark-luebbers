@@ -19,7 +19,6 @@ html {
 }
 
 body {
-  text-align: center;
   line-height: 1.4;
   padding: 0 20%;
   counter-reset: index;
@@ -31,6 +30,7 @@ section {
 
 h1, h2, h3 {
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
   font-weight: normal;
   margin: 1rem 0;
@@ -80,9 +80,7 @@ a {
 }
 
 .poem-content {
-  text-align: left;
   white-space: nowrap;
-  margin-top: 4rem;
 }
 
 .poem-content p {
@@ -91,6 +89,7 @@ a {
 
 .poem::before {
   display: block;
+  text-align: center;
   counter-increment: index;
   content: counter(index);
 }
@@ -109,6 +108,7 @@ a {
   left: 0;
   bottom: auto;
   right: auto;
+  background-color: white;
 }
 
 .sticky-element.is-position-start {
