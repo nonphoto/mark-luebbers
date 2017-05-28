@@ -69,18 +69,56 @@ a {
   padding: 0;
 }
 
-.poem h3 {
-  margin-bottom: 3rem;
+.poem {
+  position: relative;
 }
 
-.poem p {
+.poem-title {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.poem-content {
   text-align: left;
   white-space: nowrap;
-  /*font-size: 20px;*/
+  margin-top: 4rem;
+}
+
+.poem-content p {
+  margin: 1rem 0;
 }
 
 .poem::before {
   display: block;
   counter-increment: index;
   content: counter(index);
+}
+
+
+
+/* STICKY CONTAINER */
+
+.sticky-container {
+  position: relative;
+}
+
+.sticky-element {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+}
+
+.sticky-element.is-position-start {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+}
+
+.sticky-element.is-position-end {
+  position: absolute;
+  top: auto;
+  bottom: 0;
 }

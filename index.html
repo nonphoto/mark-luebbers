@@ -19,7 +19,9 @@
   <section>
     {% for poem in site.poems %}
     <a href="/#{{ poem.slug }}">
-      <h3>{{ poem.title }}</h3>
+      <h3>
+        {{ poem.title }}
+      </h3>
     </a>
     {% endfor %}
   </section>
@@ -28,10 +30,10 @@
 
   {% for poem in site.poems %}
   <section id="{{ poem.slug }}" class="poem">
-    <h3>
-      {{ poem.title }}
-    </h3>
-    <div>
+    <div class="poem-content sticky-container">
+      <h3 class="poem-title sticky-element">
+        {{ poem.title }}
+      </h3>
       {{ poem.content }}
     </div>
   </section>
@@ -48,4 +50,6 @@
       &ldquo;Like the subjects of these poems, I&rsquo;ve lived most of my life on the border between the natural and &lsquo;manufactured&rsquo; worlds, as I suppose many people do today, and find it a confusing, frustrating and fascinating way to live.&rdquo;
     </p>
   </section>
+
+  <script src="main.js" type="text/javascript"></script>
 </body>
