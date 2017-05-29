@@ -2,15 +2,20 @@ const stickyContainers = Array.from(document.getElementsByClassName('sticky-cont
 
 const stickySections = stickyContainers.map(stickyContainer => {
   const stickyElement = stickyContainer.getElementsByClassName('sticky-element')[0]
-  const stickyVoid = document.createElement('div')
-  stickyVoid.classList.add('sticky-void')
-  stickyVoid.style.height = stickyElement.clientHeight
-  stickyContainer.insertBefore(stickyVoid, stickyContainer.childNodes[0])
+
+  const stickyTopVoid = document.createElement('div')
+  stickyTopVoid.classList.add('sticky-void')
+  stickyTopVoid.style.height = stickyElement.clientHeight
+  stickyContainer.insertBefore(stickyTopVoid, stickyContainer.childNodes[0])
+
+  const stickyBottomVoid = document.createElement('div')
+  stickyBottomVoid.classList.add('sticky-void')
+  stickyBottomVoid.style.height = stickyElement.clientHeight
+  stickyContainer.appendChild(stickyBottomVoid)
 
   return {
     container: stickyContainer,
-    element: stickyElement,
-    void: stickyVoid
+    element: stickyElement
   }
 })
 
