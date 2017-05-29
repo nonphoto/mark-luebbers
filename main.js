@@ -2,8 +2,6 @@ const stickyContainers = Array.from(document.getElementsByClassName('sticky-cont
 
 const stickySections = stickyContainers.map(stickyContainer => {
   const stickyElement = stickyContainer.getElementsByClassName('sticky-element')[0]
-  stickyElement.classList.add('is-position-start')
-
   const stickyVoid = document.createElement('div')
   stickyVoid.classList.add('sticky-void')
   stickyVoid.style.height = stickyElement.clientHeight
@@ -18,8 +16,8 @@ const stickySections = stickyContainers.map(stickyContainer => {
 
 stickySections.forEach(stickySection => {
   const bounds = stickySection.container.getBoundingClientRect()
-  stickySection.top = bounds.top
-  stickySection.bottom = bounds.bottom - stickySection.element.clientHeight
+  stickySection.top = window.scrollY + bounds.top
+  stickySection.bottom = window.scrollY + bounds.bottom - stickySection.element.clientHeight
 })
 
 function updateStickySections() {
@@ -40,4 +38,5 @@ function updateStickySections() {
   })
 }
 
+updateStickySections()
 window.addEventListener('scroll', updateStickySections)
