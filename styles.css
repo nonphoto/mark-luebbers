@@ -51,7 +51,7 @@ h3 {
 hr {
   height: 0;
   border-style: none;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -80,8 +80,10 @@ a {
 
 .poem-title {
   width: 100%;
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   margin: 0;
+  background-image: linear-gradient(white 60%, transparent 100%);
 }
 
 .poem-content {
@@ -109,7 +111,6 @@ a {
   left: 0;
   bottom: auto;
   right: auto;
-  background-color: white;
 }
 
 .sticky-element.is-position-start {
