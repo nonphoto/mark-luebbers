@@ -19,11 +19,13 @@ const stickySections = stickyContainers.map(stickyContainer => {
   }
 })
 
-stickySections.forEach(stickySection => {
-  const bounds = stickySection.container.getBoundingClientRect()
-  stickySection.top = window.scrollY + bounds.top
-  stickySection.bottom = window.scrollY + bounds.bottom - stickySection.element.clientHeight
-})
+function setStickySectionBounds() {
+  stickySections.forEach(stickySection => {
+    const bounds = stickySection.container.getBoundingClientRect()
+    stickySection.top = window.scrollY + bounds.top
+    stickySection.bottom = window.scrollY + bounds.bottom - stickySection.element.clientHeight
+  })
+}
 
 function updateStickySections() {
   stickySections.forEach(stickySection => {
@@ -43,5 +45,18 @@ function updateStickySections() {
   })
 }
 
+setStickySectionBounds()
 updateStickySections()
 window.addEventListener('scroll', updateStickySections)
+
+let resizeTimeout = null
+window.addEventListener('resize', () => {
+  if (resizeTimeout) {
+    clearTimeout(resizeTimeout)
+  }
+  resizeTimeout = setTimeout(() => {
+    console.log('resize')
+    setStickySectionBounds()
+    resizeTimeout = null
+  }, 500)
+})
