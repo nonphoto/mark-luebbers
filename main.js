@@ -1,62 +1,64 @@
-const stickyContainers = Array.from(document.getElementsByClassName('sticky-container'))
+class StickySection {
+  constructor(container) {
+    this.container = container
+    this.element = this.container.getElementsByClassName('sticky-element')[0]
 
-const stickySections = stickyContainers.map(stickyContainer => {
-  const stickyElement = stickyContainer.getElementsByClassName('sticky-element')[0]
+    this.topVoid = document.createElement('div')
+    this.topVoid.classList.add('sticky-void')
+    this.topVoid.style.height = this.element.clientHeight
+    this.container.insertBefore(this.topVoid, this.container.childNodes[0])
 
-  const stickyTopVoid = document.createElement('div')
-  stickyTopVoid.classList.add('sticky-void')
-  stickyTopVoid.style.height = stickyElement.clientHeight
-  stickyContainer.insertBefore(stickyTopVoid, stickyContainer.childNodes[0])
-
-  const stickyBottomVoid = document.createElement('div')
-  stickyBottomVoid.classList.add('sticky-void')
-  stickyBottomVoid.style.height = stickyElement.clientHeight
-  stickyContainer.appendChild(stickyBottomVoid)
-
-  return {
-    container: stickyContainer,
-    element: stickyElement
+    this.bottomVoid = document.createElement('div')
+    this.bottomVoid.classList.add('sticky-void')
+    this.bottomVoid.style.height = this.element.clientHeight
+    this.container.appendChild(this.bottomVoid)
   }
-})
 
-function setStickySectionBounds() {
-  stickySections.forEach(stickySection => {
-    const bounds = stickySection.container.getBoundingClientRect()
-    stickySection.top = window.scrollY + bounds.top
-    stickySection.bottom = window.scrollY + bounds.bottom - stickySection.element.clientHeight
-  })
-}
+  updateBounds() {
+    const bounds = this.container.getBoundingClientRect()
+    this.top = window.scrollY + bounds.top
+    this.bottom = window.scrollY + bounds.bottom - this.element.clientHeight
+  }
 
-function updateStickySections() {
-  stickySections.forEach(stickySection => {
-    if (window.scrollY >= stickySection.top) {
-      stickySection.element.classList.remove('is-position-start')
+  updateElementPosition() {
+    if (window.scrollY >= this.top) {
+      this.element.classList.remove('is-position-start')
     }
     else {
-      stickySection.element.classList.add('is-position-start')
+      this.element.classList.add('is-position-start')
     }
 
-    if (window.scrollY <= stickySection.bottom) {
-      stickySection.element.classList.remove('is-position-end')
+    if (window.scrollY <= this.bottom) {
+      this.element.classList.remove('is-position-end')
     }
     else {
-      stickySection.element.classList.add('is-position-end')
+      this.element.classList.add('is-position-end')
     }
-  })
+  }
 }
-
-setStickySectionBounds()
-updateStickySections()
-window.addEventListener('scroll', updateStickySections)
 
 let resizeTimeout = null
+
+const stickyContainers = Array.from(document.getElementsByClassName('sticky-container'))
+const stickySections = stickyContainers.map(stickyContainer => new StickySection(stickyContainer))
+
+function updateAllBounds() {
+  stickySections.forEach(section => { section.updateBounds() })
+}
+
+function updateAllElementPositions() {
+  stickySections.forEach(section => { section.updateElementPosition() })
+}
+
+window.addEventListener('scroll', updateAllElementPositions)
+
 window.addEventListener('resize', () => {
   if (resizeTimeout) {
     clearTimeout(resizeTimeout)
   }
   resizeTimeout = setTimeout(() => {
-    console.log('resize')
-    setStickySectionBounds()
+    updateAllBounds()
+    updateAllElementPositions()
     resizeTimeout = null
   }, 500)
 })
