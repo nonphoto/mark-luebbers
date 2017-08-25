@@ -62,3 +62,6 @@ window.addEventListener('resize', () => {
     resizeTimeout = null
   }, 500)
 })
+
+updateAllBounds()
+updateAllElementPositions()
