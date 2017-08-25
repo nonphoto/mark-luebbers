@@ -23,7 +23,7 @@ html {
   background-color: white;
   color: black;
   font-size: 24px;
-  font-family: 'GT Sectra Trial', sans-serif;
+  font-family: 'Spectral', serif;
 }
 
 body {
@@ -94,7 +94,10 @@ a {
   padding-top: 1rem;
   padding-bottom: 3rem;
   margin: 0;
-  background-image: linear-gradient(white 60%, transparent 100%);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 1) 60%,
+    rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .poem-content {
