@@ -16,8 +16,6 @@
     <p>Cincinnati, Ohio<br>May, 2017</p>
   </section>
 
-  <hr>
-
   <section class="table-of-contents">
     {% for poem in site.poems %}
     <a href="/#{{ poem.slug }}">
@@ -33,8 +31,6 @@
     </a>
   </section>
 
-  <hr>
-
   {% for poem in site.poems %}
   <section id="{{ poem.slug }}" class="poem">
     <div class="sticky-container">
@@ -47,7 +43,6 @@
     </div>
   </section>
 
-  <hr>
   {% endfor %}
 
   <section id="about" class="cover">
