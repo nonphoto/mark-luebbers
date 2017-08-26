@@ -14,29 +14,30 @@ hsla(148, 5%, 90%, 1);
   padding: 0;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 html {
   background-color: white;
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   font-family: 'Spectral', serif;
 }
 
+@media (min-width: 600px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/* max-width: 700px; */
 body {
   counter-reset: index;
   line-height: 1.4;
-  max-width: 700px;
-  margin: auto;
-  padding: 0 1rem;
   font-weight: 300;
-}
-
-section {
-  padding: 8rem 0;
 }
 
 h1, h2, h3 {
@@ -63,6 +64,14 @@ hr {
   height: 0;
   border-style: none;
   border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  hr {
+    max-width: 768px;
+    margin: auto;
+  }
 }
 
 p {
@@ -74,6 +83,10 @@ a {
   text-decoration: none;
 }
 
+
+
+/* SECTIONS */
+
 .cover {
   display: flex;
   flex-direction: column;
@@ -82,11 +95,31 @@ a {
   text-align: center;
 
   height: 100vh;
-  padding: 0;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .cover {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+
+.table-of-contents {
+  padding: 4rem 0;
 }
 
 .poem {
   position: relative;
+  padding-top: 4rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .poem {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .poem-title {
@@ -102,7 +135,17 @@ a {
 
 .poem-content {
   white-space: nowrap;
-  overflow: visible;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .poem-content {
+    max-width: 768px;
+    margin: auto;
+    overflow-x: visible;
+  }
 }
 
 .poem::before {

@@ -18,7 +18,7 @@
 
   <hr>
 
-  <section>
+  <section class="table-of-contents">
     {% for poem in site.poems %}
     <a href="/#{{ poem.slug }}">
       <h3>
@@ -37,11 +37,13 @@
 
   {% for poem in site.poems %}
   <section id="{{ poem.slug }}" class="poem">
-    <div class="poem-content sticky-container">
+    <div class="sticky-container">
       <h3 class="poem-title sticky-element">
         {{ poem.title }}
       </h3>
-      {{ poem.content }}
+      <div class="poem-content">
+        {{ poem.content }}
+      </div>
     </div>
   </section>
 
