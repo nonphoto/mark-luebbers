@@ -37,11 +37,6 @@ class StickySection {
   }
 }
 
-let resizeTimeout = null
-
-const stickyContainers = Array.from(document.getElementsByClassName('sticky-container'))
-const stickySections = stickyContainers.map(stickyContainer => new StickySection(stickyContainer))
-
 function updateAllBounds() {
   stickySections.forEach(section => { section.updateBounds() })
 }
@@ -49,6 +44,24 @@ function updateAllBounds() {
 function updateAllElementPositions() {
   stickySections.forEach(section => { section.updateElementPosition() })
 }
+
+let resizeTimeout = null
+
+const stickyContainers = Array.from(document.getElementsByClassName('sticky-container'))
+const stickySections = stickyContainers.map(stickyContainer => new StickySection(stickyContainer))
+const tableOfContents = document.getElementById('table-of-contents')
+const links = Array.from(tableOfContents.getElementsByTagName('a'))
+
+links.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault()
+    document.body.classList.add('is-hidden')
+    setTimeout(() => {
+      window.location.href = link.href
+      document.body.classList.remove('is-hidden')
+    }, 300)
+  })
+})
 
 window.addEventListener('scroll', updateAllElementPositions)
 

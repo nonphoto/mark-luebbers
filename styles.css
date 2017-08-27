@@ -25,6 +25,12 @@ body {
   counter-reset: index;
   line-height: 1.4;
   font-weight: 300;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+body.is-hidden {
+  opacity: 0;
 }
 
 h1, h2, h3 {
