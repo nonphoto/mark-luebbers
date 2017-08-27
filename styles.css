@@ -22,9 +22,9 @@ html {
 }
 
 body {
-  counter-reset: index;
+  counter-reset: poem-index;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 1;
   transition: opacity 300ms;
 }
@@ -37,7 +37,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1rem 0;
 }
 
@@ -63,6 +63,7 @@ p {
 a {
   color: black;
   text-decoration: none;
+  font-style: italic;
 }
 
 
@@ -81,7 +82,24 @@ a {
 }
 
 .table-of-contents {
-  padding: 4rem 0;
+  counter-reset: contents-index;
+  padding: 4rem 1rem;
+}
+
+.table-of-contents h3 {
+  padding-bottom: 3rem;
+}
+
+.contents-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.contents-link::after {
+  counter-increment: contents-index;
+  content: counter(contents-index);
 }
 
 .poem {
@@ -111,8 +129,8 @@ a {
 .poem::before {
   display: block;
   text-align: center;
-  counter-increment: index;
-  content: counter(index);
+  counter-increment: poem-index;
+  content: counter(poem-index);
 }
 
 
@@ -159,7 +177,8 @@ a {
   }
 
   .cover,
-  .poem-content {
+  .poem-content,
+  .table-of-contents {
     max-width: 768px;
     margin: auto;
   }
