@@ -126,6 +126,10 @@ a {
   padding: 0 1rem;
 }
 
+.poem-content p.wrap {
+  white-space: initial;
+}
+
 .poem::before {
   display: block;
   text-align: center;
