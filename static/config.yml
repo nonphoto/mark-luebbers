@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: nonphoto/mark-luebbers
+  branch: master
+  base_url: https://netlify-cms-auth-provider.now.sh
+display_url: https://mark.luebbers.cc
+media_folder: "static/images"
+slug:
+  encoding: "ascii"
+  clean_accents: true
+collections:
+  - name: "poems"
+    label: "Poems"
+    folder: "static/poems"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
