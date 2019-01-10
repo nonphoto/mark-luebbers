@@ -120,14 +120,7 @@ a {
 }
 
 .poem-content {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
   padding: 0 1rem;
-}
-
-.poem-content p.wrap {
-  white-space: initial;
 }
 
 .poem::before {
