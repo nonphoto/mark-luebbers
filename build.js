@@ -3,10 +3,9 @@
 const fs = require('fs')
 const YAML = require('yaml')
 const markdown = require('markdown').markdown
+const template = require('./source/template')
 
-function template(content) {
-    return content
-}
+const content = {}
 
 const files = process.argv.slice(2)
 const promises = files.map((file) => {
@@ -19,12 +18,12 @@ const promises = files.map((file) => {
 })
 
 Promise.all(promises).then((chunks) => {
-    const content = chunks.map((chunk) => {
+    content.poems = chunks.map((chunk) => {
         const parsedChunk = chunk.toString('utf8').match(/---((.|\n)*)---((.|\n)*)/m)
         const data = YAML.parse(parsedChunk[1])
         data.body = markdown.toHTML(parsedChunk[3])
         return data
     })
 
-    process.stdout.write(template(content))
+    process.stdout.write(template(content).toString())
 })
