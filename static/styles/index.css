@@ -57,7 +57,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -120,7 +120,9 @@ a {
 }
 
 .poem-content {
-  padding: 0 1rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .poem-content.preformatted {
@@ -143,34 +145,26 @@ a {
 /* STICKY CONTAINER */
 
 .sticky-container {
+  box-sizing: border-box;
   position: relative;
 }
 
 .sticky-element {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  right: auto;
+  position: sticky;
+  top: -1;
+  line-height: 1em;
 }
-
-.sticky-element.is-position-start {
-  position: absolute;
-  top: 0;
-  bottom: auto;
-}
-
-.sticky-element.is-position-end {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-}
-
 
 
 /* BREAKPOINTS */
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 800px) {
   html {
     font-size: 22px;
   }
