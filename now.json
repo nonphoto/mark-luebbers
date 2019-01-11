@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "mark-luebbers",
+    "alias": [
+        "mark.luebbers.cc"
+    ],
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" }},
+        { "src": "static/**", "use": "@now/static" }
+    ]
+}
