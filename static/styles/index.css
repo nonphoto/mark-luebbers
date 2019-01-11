@@ -17,7 +17,7 @@ hsla(148, 5%, 90%, 1);
 html {
   background-color: white;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Spectral', serif;
 }
 
@@ -123,6 +123,14 @@ a {
   padding: 0 1rem;
 }
 
+.poem-content.preformatted {
+  overflow-x: scroll;
+}
+
+.poem-content.preformatted p {
+  white-space: pre;
+}
+
 .poem::before {
   display: block;
   text-align: center;
@@ -162,21 +170,15 @@ a {
 
 /* BREAKPOINTS */
 
-@media (min-width: 600px) {
-  html {
-    font-size: 22px;
-  }
-}
-
 @media (min-width: 768px) {
   html {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .cover,
   .poem-content,
   .table-of-contents {
-    max-width: 768px;
+    max-width: 38rem;
     margin: auto;
   }
 

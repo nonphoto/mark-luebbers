@@ -8,7 +8,7 @@ module.exports = () => {
                 Mark Luebbers teaches English at an independent school outside of Cincinnati, Ohio. He has written poetry sporadically all his life but has become serious about the discipline and more ambitious about publication in&nbsp;recent&nbsp;years.
             </p>
             <p>
-                &ldquo;Like the subjects of these poems, I&rsquo;ve lived most of my life on the border between the natural and &lsquo;manufactured&rsquo; worlds, as I suppose many people do today, and find it a confusing, frustrating and fascinating way to live.&rdquo;
+                “Like the subjects of these poems, I’ve lived most of my life on the border between the natural and ‘manufactured’ worlds, as I suppose many people do today, and find it a confusing, frustrating and fascinating way to live.”
             </p>
         </section>
     `

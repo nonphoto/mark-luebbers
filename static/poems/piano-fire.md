@@ -11,7 +11,7 @@ culled from barns, emptied from parlors,
 unsold from estate sales, left-behinds from foreclosures
 or auctioned off clans grown and moved.
 They are long-toothed, exhausted veterans
-of kids&rsquo; scales, booze breath sing-alongs,
+of kids’ scales, booze breath sing-alongs,
 carols for the deaf grandmother, and the waltz,
 the rag, the boogie-woogie, Broadway
 and the tuneless wanderings of sleepless
@@ -30,11 +30,11 @@ with insults from pigeons and bats.
 Gap toothed smiles leer from curved keyboards
 held in skeletal frames.
 
-Gassett says he&rsquo;ll invite everyone he knows up to see
+Gassett says he’ll invite everyone he knows up to see
 when he decides its time. Grill and swill.
-Haul &rsquo;em all to the middle, huck in a gallon of kerosene.
+Haul ’em all to the middle, huck in a gallon of kerosene.
 And chuck on the smoking end of a Swisher Sweet.
-We&rsquo;ll stand clear of the crashed chords,
+We’ll stand clear of the crashed chords,
 singing strings, moans of failing joinery,
 skyward flailing sparks and the chorus of perfect ash,
 And howl with joy at all noise, light, and upward endings.
