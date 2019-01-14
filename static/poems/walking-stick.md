@@ -1,8 +1,7 @@
 ---
 title: Walking Stick
-slug: walking-stick
+preformatted: true
 ---
-
 (Diapheromera Femorata)
 
 Striated, creased,

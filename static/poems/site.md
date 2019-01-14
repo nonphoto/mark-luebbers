@@ -1,6 +1,6 @@
 ---
 title: Site
-slug: site
+preformatted: true
 ---
 
 Robert Smithson is stuck in traffic on 278

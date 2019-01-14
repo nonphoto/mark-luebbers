@@ -1,6 +1,6 @@
 ---
 title: Dragonfly Atlas
-slug: dragonfly-atlas
+preformatted: true
 ---
 
 These words could be written in the border margin

@@ -1,6 +1,6 @@
 ---
 title: Los Entrometidos
-slug: los-entrometidos
+preformatted: true
 ---
 
 The coyotes nightly move in twos

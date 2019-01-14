@@ -1,6 +1,6 @@
 ---
 title: In Situ
-slug: in-situ
+preformatted: true
 ---
 
 The six-point buck

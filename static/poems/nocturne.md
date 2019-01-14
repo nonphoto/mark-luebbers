@@ -1,6 +1,6 @@
 ---
 title: Nocturne
-slug: nocturne
+preformatted: true
 ---
 
 Black rat snake soaking in yesterday’s pavement heat

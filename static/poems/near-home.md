@@ -1,6 +1,6 @@
 ---
 title: Near Home
-slug: near-home
+preformatted: true
 ---
 
 Dust giant in the field behind the superstore, rising

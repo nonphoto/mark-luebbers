@@ -1,6 +1,6 @@
 ---
 title: Barbwire Fence
-slug: barbwire-fence
+preformatted: true
 ---
 
 The posts set straight once, stayed upright long enough

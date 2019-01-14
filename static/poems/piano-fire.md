@@ -1,6 +1,6 @@
 ---
 title: Piano Fire
-slug: piano-fire
+preformatted: true
 ---
 
 In a cowflop field up the Trebo road,

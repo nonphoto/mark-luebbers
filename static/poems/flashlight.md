@@ -1,6 +1,6 @@
 ---
 title: Flashlight
-slug: flashlight
+preformatted: true
 ---
 
 ’68 bike ride home from supper at Davey’s house.
