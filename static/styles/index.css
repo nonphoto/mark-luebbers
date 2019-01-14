@@ -62,7 +62,6 @@ p {
 
 a {
   color: black;
-  text-decoration: none;
   font-style: italic;
 }
 
@@ -98,6 +97,7 @@ a {
 }
 
 .contents-link::after {
+  text-decoration: none;
   counter-increment: contents-index;
   content: counter(contents-index);
 }
