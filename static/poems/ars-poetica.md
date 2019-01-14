@@ -1,6 +1,7 @@
 ---
 title: Ars Poetica
-slug: ars-poetica
+date: 2019-01-14T16:58:04.439Z
+preformatted: true
 ---
 
 Seared under smeared sun
