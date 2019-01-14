@@ -119,6 +119,12 @@ a {
     );
 }
 
+.poem-title > * {
+  max-width: 28em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .poem-content {
   padding-bottom: 3rem;
   padding-left: 1rem;
@@ -152,7 +158,6 @@ a {
 .sticky-element {
   position: sticky;
   top: -1;
-  line-height: 1em;
 }
 
 

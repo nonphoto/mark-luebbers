@@ -5,7 +5,7 @@ module.exports = (content) => {
         return html`
             <section id="${poem.slug}" class="poem ${poem.preformatted ? 'preformatted' : ''}">
                 <div class="sticky-container">
-                    <h3 class="poem-title sticky-element">${poem.title}</h3>
+                    <div class="poem-title sticky-element"><h3>${poem.title}</h3></div>
                     <div class="poem-content">${html(poem.body)}</div>
                 </div>
             </section>
