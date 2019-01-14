@@ -1,6 +1,7 @@
 ---
 title: Apiary
-slug: apiary
+date: 2019-01-14T16:57:50.447Z
+preformatted: true
 ---
 
 In the preened cul-de-sac, one house built before the rest
