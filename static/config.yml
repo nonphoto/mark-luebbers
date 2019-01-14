@@ -5,6 +5,8 @@ backend:
   base_url: https://netlify-cms-auth-provider.now.sh
 display_url: https://mark.luebbers.cc
 media_folder: "static/images"
+editor:
+  preview: false
 slug:
   encoding: "ascii"
   clean_accents: true
