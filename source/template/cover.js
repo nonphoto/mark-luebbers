@@ -7,7 +7,6 @@ module.exports = () => {
             <h1>Collection of Poems</h1>
             <span>By</span>
             <h2>Mark E. Luebbers</h2>
-            <p>Cincinnati, Ohio<br>October, 2017</p>
         </section>
     `
 }
