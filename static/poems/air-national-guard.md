@@ -1,6 +1,7 @@
 ---
 title: Air National Guard
-slug: air-national-guard
+date: 2019-01-14T16:57:20.257Z
+preformatted: true
 ---
 
 Plain corrugation of clouds:
