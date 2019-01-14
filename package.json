@@ -5,8 +5,8 @@
   "main": "build.js",
   "scripts": {
     "start": "http-server",
-    "build": "mkdir -p build && node build.js static/poems/* > build/index.html",
-    "now-build": "npm run build"
+    "build:html": "node build.js source/poems/* > build/index.html",
+    "build": "mkdir -p build && cp -r static/* build && npm run build:html"
   },
   "repository": {
     "type": "git",

@@ -13,7 +13,7 @@ slug:
 collections:
   - name: "poems"
     label: "Poems"
-    folder: "static/poems"
+    folder: "source/poems"
     create: true
     slug: "{{slug}}"
     fields:
