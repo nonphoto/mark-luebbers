@@ -12,6 +12,7 @@ module.exports = (content) => {
                 <title>Mark Luebbers</title>
                 <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
                 <link rel="stylesheet" href="/styles/index.css">
+                <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
                 <script type="text/javascript" src="/scripts/index.js" defer></script>
             </head>
             <body>
