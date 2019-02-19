@@ -1,9 +1,9 @@
 ---
 title: Principles of Chemistry
-date: 2019-02-19T19:40:56.883Z
+date: 2019-02-19T19:42:57.907Z
 preformatted: true
 ---
-Principles of Chemistry 
+**Principles of Chemistry** 
 
 Was for me
 
