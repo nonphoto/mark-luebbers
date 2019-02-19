@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+display_url: https://mark.luebbers.cc
+media_folder: "static/images"
+editor:
+  preview: false
+slug:
+  encoding: "ascii"
+  clean_accents: true
+collections:
+  - name: "poems"
+    label: "Poems"
+    folder: "static/poems"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Preformatted", name: "preformatted", widget: "boolean", default: true}
+      - {label: "Body", name: "body", widget: "markdown"}
