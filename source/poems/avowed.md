@@ -5,8 +5,6 @@ preformatted: true
 ---
 **Avowed**
 
-
-
 "...of course, I disavow and condemn them."
 
 
