@@ -47,9 +47,11 @@ regardless of will or time
 
 to a perfect valence
 
-to exactly what one lacks
+to make exactly 
 
-the demonstration 
+what each one lacks.
+
+The demonstration 
 
 of completeness
 
