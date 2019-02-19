@@ -10,7 +10,8 @@ module.exports = () => {
             <p>
                 “Like the subjects of these poems, I’ve lived most of my life on the border between the natural and ‘manufactured’ worlds, as I suppose many people do today, and find it a confusing, frustrating and fascinating way to live.”
             </p>
-            <p class="copyright"><a href="mailto:mark@luebbers.cc">Contact</a> &bull; <span data-netlify-identity-button></span> &bull; &copy; 2019 Mark Luebbers</p>
+            <p class="copyright"><a href="mailto:mark@luebbers.cc">Contact</a> &bull; <a href=
+            /admin">Sign In</a> &bull; &copy; 2019 Mark Luebbers</p>
         </section>
     `
 }
